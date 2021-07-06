@@ -2,14 +2,13 @@
 //  PTIHomeScreen.swift
 //  Test Fires 1.0
 //
-//  Created by Jason M Davis on 6/8/21.
+//  Created by Jason M Davis on 7/4/21.
 //
 
 import UIKit
 
 
 struct Item {
-    var isoCode: String
     var name: String
 }
 
@@ -17,22 +16,21 @@ class PTIHomeScreen: UITableViewController {
    
     
     let items = [
-    Item(isoCode: "PTI.Oil1", name: "Motor Oil"),
-    Item(isoCode: "PTI.FuelFilter1", name: "Fuel Filter"),
-    Item(isoCode: "PTI.Tire2", name: "Tire Pressure"),
-    Item(isoCode: "PTI.PSFluid1", name: "Power Steering Fluid"),
-    Item(isoCode: "PTI.Coolant1", name: "Coolant"),
-    Item(isoCode: "PTI.Suspension1", name: "Suspension"),
-    Item(isoCode: "PTI.GHService", name: "Glad Hand"),
-    // Item(isoCode: "PTI.FireExtin1", name: "Fire Extinguisher"),
-    Item(isoCode: "PTI.BrakeChamber1", name: "Brake Chambers"),
-    Item(isoCode: "PTI.Tire9", name: "Tires"),
-    Item(isoCode: "PTI.JumpStuds1", name: "Jump Studs"),
-    //  Item(isoCode: "PTI.Belts1", name: "Belts"),
+    Item(name: "Motor Oil"),
+    Item(name: "Fuel Filter"),
+    Item(name: "Tire Pressure"),
+    Item(name: "Power Steering Fluid"),
+    Item(name: "Coolant"),
+    Item(name: "Suspension"),
+    Item(name: "Glad Hand"),
+    Item(name: "5th Wheel"),
+    Item(name: "Brake Chambers"),
+    Item(name: "Tires"),
+    Item(name: "Jump Studs"),
+    Item(name: "Belts"),
     // Item(isoCode: <#T##String#>, name: <#T##String#>)
     // Item(isoCode: <#T##String#>, name: <#T##String#>)
     // Item(isoCode: <#T##String#>, name: <#T##String#>)
-
 
     
     
@@ -48,13 +46,11 @@ class PTIHomeScreen: UITableViewController {
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     // MARK: - Table view data source
-
     
     override func numberOfSections(in tableView: UITableView) -> Int {
             return 1
@@ -71,7 +67,7 @@ class PTIHomeScreen: UITableViewController {
 
         let item = items[indexPath.row]
         cell.textLabel?.text = item.name
-        cell.imageView?.image = UIImage(named: item.isoCode)
+        
         
         return cell
     }
@@ -102,4 +98,3 @@ class PTIHomeScreen: UITableViewController {
     
     
     
-
